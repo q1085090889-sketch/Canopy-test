@@ -1,0 +1,46 @@
+{
+  "task": {
+    "target_count": 30,
+    "candidate_limit": 40,
+    "regions": ["Hong Kong", "Taiwan", "Mainland China", "Thailand", "Malaysia"],
+    "target_titles": [
+      "Chief Investment Officer",
+      "CIO",
+      "Family Office Director",
+      "Head of Family Office",
+      "Principal",
+      "Managing Partner",
+      "Investment Director",
+      "Family Principal"
+    ],
+    "min_aum_usd": 200000000,
+    "require_email": true,
+    "min_email_confidence": 70
+  },
+  "resources": {
+    "apollo": true,
+    "serper": true,
+    "brave": true,
+    "hunter": true,
+    "gemini_scoring": true,
+    "gemini_outreach": true
+  },
+  "human_review": {
+    "after_candidate_discovery": true,
+    "after_research_enrichment": true,
+    "before_outreach_generation": true
+  },
+  "scoring": {
+    "weights": {
+      "match_score": 0.35,
+      "reach_score": 0.25,
+      "budget_score": 0.25,
+      "cycle_score": 0.15
+    },
+    "a_level_min": 30,
+    "b_level_min": 20
+  },
+  "rate_limit": {
+    "request_delay_seconds": 1.2
+  }
+}
